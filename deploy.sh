@@ -17,10 +17,7 @@ git checkout -b main
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
-
-# if you are deploying to https://LuisC73.github.io/FyloDark
-# git push -f git@github.com:LuisC73/FyloDark.git main:gh-pages
+# if you are deploying to https://luisc73.github.io/fylo_dark
+# git push -f git@github.com:LuisC73/fylo_dark.git main:gh-pages
 
 cd -
