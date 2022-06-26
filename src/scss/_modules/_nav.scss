@@ -1,0 +1,40 @@
+@use '../_layout/vars'as var;
+@use '../_layout/mixin'as mixin;
+
+.navbar {
+    @include mixin.flex(space-between, center, row);
+    width: 100vw;
+    min-height: 10vh;
+    padding: 30px;
+    font-family: var.$font-header;
+
+    &__ul {
+        @include mixin.flex(center, center, row);
+
+        &:not(:last-child) {
+            padding-right: 56px;
+        }
+    }
+
+    &__logo {
+        width: 8rem;
+    }
+
+    &__li {
+        margin: 0 2rem;
+    }
+
+    &__link {
+        color: var.$white;
+        font-size: .9rem;
+        font-weight: 300;
+        transition: .3s;
+
+        &:hover {
+            font-weight: 700;
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+    }
+
+}

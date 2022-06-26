@@ -1,0 +1,117 @@
+@use '../_layout/vars'as var;
+@use '../_layout/mixin'as mixin;
+
+.cards {
+    background-color: var.$backgroud-main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 9rem 1.6rem;
+    gap: 1.8rem;
+    width: 100vw;
+
+    &__element{
+        background-color: var.$backgroud-color;
+        // @include mixin.flex(center, flex-start, column);
+        width: 25rem;
+        // height: 230px;
+        border-radius: .4rem;
+        padding: 45px 40px;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+        transition: .4s;
+        position: relative;
+
+        &:first-child::before{
+            content: url("assets/bg-quotes.png");
+            position: absolute;
+            top: -35px;
+            left: -15px;
+            z-index: 1;
+        }
+
+        &:hover{
+            transform: translateY(-10px);
+        }
+    }
+
+    &__texts{
+        font-weight: 300;
+        margin-bottom: 25px;
+    }
+
+    &__profile{
+        @include mixin.flex(flex-start,center, row);
+        margin-top: 2rem;
+
+        & > img{
+            width: 27px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    }
+
+    &__info{
+        margin-left: .8rem;
+    }
+
+    &__name{
+        font-weight: 700;
+        font-size: .9rem;
+    }
+
+    &__title{
+        font-weight: 300;
+        font-size: .6rem;
+        margin-top: .3rem;
+    }
+}
+
+@media (max-width:768px) {
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 10rem 8rem;
+        gap: 24px;
+
+        &__texts{
+            font-size: .85rem;
+        }
+
+        &__name{
+            font-size: .8rem;
+        }
+
+        &__profile{
+            & > img{
+                width: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 10rem 5rem;
+        gap: 24px;
+
+    }
+}
+
+
+@media (max-width: 450px){
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 10rem 5rem;
+        gap: 24px;
+
+        &__element{
+            width: 18rem;
+        }
+    }
+}
+// .cards__quotes {
+//     width: 60px;
+//     position: absolute;
+//     top: 5.6rem;
+//     left: 40px;
+//     z-index: 1;
+// }
