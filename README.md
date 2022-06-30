@@ -6,8 +6,7 @@
 
 FyloDark es una landing page de Frontend Mentor la cual he diseñado con Herramienas como:
 
--React
--Sass
+-React y Sass
 
 Haciendo uso de la metodologia BEM
 
