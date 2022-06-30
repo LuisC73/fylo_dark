@@ -8,7 +8,9 @@ FyloDark es una landing page de Frontend Mentor la cual he diseñado con Herrami
 
 -React y Sass
 
-Haciendo uso de la metodologia BEM
+Haciendo uso de la metodologia BEM y Vite para la creacion de proyecto React, para correr el proyecto usar el comando:
+
+-npm run dev
 
 
 
